@@ -39,7 +39,9 @@
         </video><br>
 
         <section id="music">
-          <h3><label for="#music">Best Friend by Rex Orange County</label></h3>
+          <h3><label for="#music">Best Friend by Rex Orange County
+            <p>Written by Rex Orange County & Two Inch Punch <br> Released January 25,2017</p>
+          </label></h3>
           <audio title="[Song] Best Friend by Rex Orange County" controls>
             <source src="best_friend.ogg" type="audio/ogg">
             <source src="best_friend.mp3" type="audio/mpeg">
@@ -52,27 +54,27 @@
         </div>
       </section>
 
-      <section id="students-table">
-        <h2 for="students-table">2019-2020 Student Report</h2>
-        <table id="student-report">
-          <caption class=.>Report of 6th Grader Averages in 2019-2020</caption>
+      <section id="students-table" tabindex="0">
+        <h2 for="students-table" tabindex="0">2019-2020 Student Report</h2>
+        <table id="student-report" tabindex="0">
+          <caption>Report of 6th Grader Averages in 2019-2020</caption>
           <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Test Grade</th>
-            <th scope="col">Teacher</th>
+            <th scope="col" tabindex="0">Name</th>
+            <th scope="col" tabindex="0">Test Grade</th>
+            <th scope="col" tabindex="0">Teacher</th>
           </tr>
           <tr>
-            <td>Julie</td>
+            <th scope="row" tabindex="0">Julie</th>
             <td>95%</td>
             <td>Robert Pratt</td>
           </tr>
           <tr>
-            <td>Benjamin</td>
+            <th scope="row" tabindex="0">Benjamin</th>
             <td>100%</td>
             <td>Robert Pratt</td>
           </tr>
           <tr>
-            <td>Kerry</td>
+            <th scope="row" tabindex="0">Kerry</th>
             <td>90%</td>
             <td>Catherine Huang</td>
           </tr>
@@ -83,7 +85,7 @@
         <h2><label for="image-gallery">Gallery</label></h2>
 
         <article>
-          <img src="favorite_fruit.png" aria-details="pie-chart-info" alt="Pie Chart: What is your favorite fruit? Data table follows.">
+          <img src="favorite_fruit.png" aria-details="pie-chart-info" alt="Pie Chart: What is your favorite fruit? Data table follows." tabindex="0">
           <dl class="visually-hidden" id="pie-chart-info">
             <dt>Banana</dt>
             <dd>30%</dd>
@@ -96,18 +98,18 @@
             <dt>Peach</dt>
             <dd>10%</dd>
           </dl>
-        </art icle>
+        </article>
 
         <article>
-          <img src="bar_graph.png" alt="">
+          <img src="bar_graph.png" alt="" tabindex="0">
         </article>
         <article>
-          <img src="line_graph.png" alt="">
+          <img src="line_graph.png" alt="" tabindex="0">
         </article>
       </section>
 
-      <form id="user-form">
-        <fieldset>
+      <form id="user-form" tabindex="0">
+        <fieldset tabindex="0">
           <legend>Basic Text Form Practice</legend>
           <label for="first-name">First Name: <b>*</b></label><br>
           <input id="first-name" aria-required="true" type="text" placeholder="Enter Your First Name"><br>
@@ -117,36 +119,36 @@
           <input id="birth-date" aria-required="true" type="date">
         </fieldset>
 
-          <fieldset id="pizza-toppings">
-            <legend>Radio Input Practice [Pizza Toppings]</legend>
-            <form>
-              <h4>Favorite Pizza Topping</h4>
-              <div role="radiogroup">
-                <input aria-labelledby="pizza-toppings" type="radio" id="pineapple" name="topping">
-                <label for="pineapple">Pineapple</label><br>
-                <input aria-labelledby="pizza-toppings" type="radio" id="ham" name="topping">
-                <label for="ham">Ham</label><br>
-                <input aria-labelledby="pizza-toppings" type="radio" id="olive" name="topping">
-                <label for="olive">Olive</label><br>
-                <input aria-labelledby="pizza-toppings" type="radio" id="none" name="topping">
-                <label for="none">None</label><br>
-              </div>
-            </form>
-          </fieldset>
+        <fieldset id="pizza-toppings" tabindex="0">
+          <legend>Radio Input Practice [Pizza Toppings]</legend>
+          <form>
+            <h4>Favorite Pizza Topping</h4>
+            <div role="radiogroup">
+              <input aria-labelledby="pizza-toppings" type="radio" id="pineapple" name="topping">
+              <label for="pineapple">Pineapple</label><br>
+              <input aria-labelledby="pizza-toppings" type="radio" id="ham" name="topping">
+              <label for="ham">Ham</label><br>
+              <input aria-labelledby="pizza-toppings" type="radio" id="olive" name="topping">
+              <label for="olive">Olive</label><br>
+              <input aria-labelledby="pizza-toppings" type="radio" id="none" name="topping">
+              <label for="none">None</label><br>
+            </div>
+          </form>
+        </fieldset>
 
-          <fieldset id="city-travel">
-            <legend>Select Input Practice [Cities]</legend>
-            <label for="cities">Which city would you travel to?</label>
-            <select id="cities" aria-labelledby=""city-travel>
-              <option>New York</option>
-              <option>Seoul</option>
-              <option>Moscow</option>
-              <option>Buenos Aires</option>
-              <option>Tokyo</option>
-            </select>
-          </fieldset>
+        <fieldset id="city-travel" tabindex="0">
+          <legend>Select Input Practice [Cities]</legend>
+          <label for="cities">Which city would you travel to?</label>
+          <select id="cities" aria-labelledby=""city-travel>
+            <option>New York</option>
+            <option>Seoul</option>
+            <option>Moscow</option>
+            <option>Buenos Aires</option>
+            <option>Tokyo</option>
+          </select>
+        </fieldset>
 
-          <fieldset id="birds">
+        <fieldset id="birds" tabindex="0">
             <legend>Checklist Input Practice [Birds]</legend>
             <input id="sparrow" type="checkbox" aria-labelledby="birds" role="checkbox" value="sparrow">
             <label for="sparrow">Sparrow</label> <br>
