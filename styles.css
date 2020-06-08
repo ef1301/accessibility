@@ -155,6 +155,10 @@ section button[type=submit]:hover, button:hover {
 
 }
 
+input:focus, button:focus, a:focus, select:focus {
+    border: solid 5px yellow;
+}
+
 .hidden {
     position: absolute;
     clip: 1px 1px 1px 1px;
