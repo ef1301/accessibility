@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <!-- Navigation Bar -->
     <header>
       <h1>Accessibility</h1>
       <nav>
@@ -22,45 +23,55 @@
       </nav>
     </header>
 
+    <!-- Main Page Elements -->
     <main>
+      <!-- Alert and Dialogue Practice/Implementation -->
       <button id="alert-btn">Show Alert</button>
       <template id="notification-tmpl">
         <div class="notification">You have been alerted!</div>
       </template>
+      <!-- The HTML for the dialogue window are located at the very bottom of the document -->
       <button id="dialog-btn" onclick="openDialogue()">Show Dialog</button>
       <section id="alert"></section>
 
+      <!-- Media Practice/Implementation -->
       <section id="media">
         <h2 for="media">Media</h2>
-        <video width="320" height="240" controls>
-          <source src="movie.mp4" type="video/mp4">
-          <source src="movie.ogg" type="video/ogg">
-          Your browser does not support the video tag.
-        </video><br>
+        <!-- Video -->
+        <section id="video">
+          <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+          </video><br>
+        </section>
 
+        <!-- Audio/Music -->
         <section id="music">
-          <h3><label for="#music">Best Friend by Rex Orange County
-            <p>Written by Rex Orange County & Two Inch Punch <br> Released January 25,2017</p>
-          </label></h3>
+          <label for="#music"><h3>Best Friend by Rex Orange County</h3>
+            <h4>Written by Rex Orange County & Two Inch Punch <br> Released January 25,2017</h4>
+          </label>
           <audio title="[Song] Best Friend by Rex Orange County" controls>
             <source src="best_friend.ogg" type="audio/ogg">
             <source src="best_friend.mp3" type="audio/mpeg">
             Your browser does not support the audio tag.
           </audio>
+          <!-- Implemenation fo the Music Toggle for the Transcript/Lyrics -->
+          <button class="toggle">Display Podcast Transcript</button>
+          <div class="toggle-content">
+            <iframe title="Best Friend by Rex Orange County Lyrics" src="best_friend_lyrics.txt" frameborder="0" height="auto" width="85%"></iframe>
+          </div>
         </section>
-        <button class="toggle">Display Podcast Transcript</button>
-        <div class="toggle-content">
-          <iframe title="Best Friend by Rex Orange County Lyrics" src="best_friend_lyrics.txt" frameborder="0" height="auto" width="85%"></iframe>
-        </div>
       </section>
 
+      <!-- Data Table Practice/Implementation -->
       <section id="students-table">
         <table id="student-report" tabindex="0">
           <caption>Report of 6th Grader Averages in 2019-2020</caption>
           <tr>
-            <th scope="col" tabindex="0">Name</th>
-            <th scope="col" tabindex="0">Test Grade</th>
-            <th scope="col" tabindex="0">Teacher</th>
+            <th scope="col">Name</th>
+            <th scope="col">Test Grade</th>
+            <th scope="col">Teacher</th>
           </tr>
           <tr>
             <td>Julie</td>
@@ -80,10 +91,14 @@
         </table>
       </section>
 
+      <!-- Image Practice/Implementation -->
       <section id="image-gallery">
-        <h2><label for="image-gallery">Gallery</label></h2>
-
+        <h2><label for="image-gallery">Img Gallery</label></h2>
+        <p>The images used for this were taken from Google searches and don't necessary reflect industry standards.</p>
+        <h3>Complex Images</h3>
+        <p>One of the basics to making images,especially complex images accessible, is to utilize the alt atribute for images, but in the event that your image is too complex and descriptions may become too long for alt text, what do you do?</p>
         <article>
+          <h4>Pie Charts</h4>
           <img src="favorite_fruit.png" aria-details="pie-chart-info" alt="Pie Chart: What is your favorite fruit? Data table follows." tabindex="0">
           <dl class="visually-hidden" id="pie-chart-info" tabindex="0">
             <dt>Banana</dt>
@@ -97,17 +112,62 @@
             <dt>Peach</dt>
             <dd>10%</dd>
           </dl>
-        </article>
+          <p>
+            Some alternatives for bar graphs is to use description lists or to utilize tables to convey the information. In the event that developers don't want this to be seen but also recognized by screen readers, we utilize CSS.
+            <pre>
+.visually-hidden { 
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
 
-        <article>
-          <img src="bar_graph.png" alt="" tabindex="0">
+            </pre>
+            <i>-Code is from A11ycasts @ Google Developers-</i>
+          </p>
         </article>
+        <br>
         <article>
-          <img src="line_graph.png" alt="" tabindex="0">
+          <h4>Bar Graphs</h4>
+          <img src="bar_graph.png" aria-details="bar-graph-info" alt="" tabindex="0">
+          <dl class="visually-hidden" tabindex="0">
+            <dt>Present their ideas clearly and effectively</dt>
+            <dd>45% Agree. 55% Disagree.</dd>
+            <dt>Ability to create and deliver structured and engaging presentations</dt>
+            <dd>35% Agree. 65% Disagree.</dd>
+            <dt>Aware of implications drawn from the information presented</dt>
+            <dd>30% Agree. 70% Disagree</dd>
+            <dt>Conclude the contents in an appropriate manner.</dt>
+            <dd>40% Agree. 60% Disagree.</dd>
+            <dt>DIsplay the credibility and professionalism in their work</dt>
+            <dd>55% Agree. 45% Disagree</dd>
+            <dt>Communicate with their colleagues and clients in a multicultural environment.</dt>
+            <dd>35% Agree. 65% Disagree.</dd>
+          </dl>
+        </article>
+        <br>
+        <article>
+          <h4>Line Graphs</h4>
+          <img src="line_graph.png" alt="Line Graph: Percentages of Democrats and Republicans who supposedly worry a great deal about the quality of the environment from 2010 to 2019" tabindex="0">
+          
+          <p>This image is a bad example of an accessible line graph in that it fails the following:
+            <ul>
+              <li>Being friendly towards the visually impaired, such as people that are colorblind, who may not be able to distinguish between the two different lines on the graph.</li>
+              <li>Does not provide a legend to reduce the cognitive burden.</li>
+              <li>Does not clearly label the x and y axis of the graph</li>
+            </ul>
+            There are resources out there that can provide better accessibility for line graphs, such as High Charts. Certain resources can allow for line trends to be focusable as opposed to inserting a large description to describe the graph, which can be initimidating and difficult to absorb.
+          </p>
         </article>
       </section>
 
+      <!-- Form Practice/Implementation -->
       <form id="user-form">
+        
+        <!-- Text/Date Input Practice/Implementation -->
         <fieldset id="basic-info">
           <legend>Basic Text Form Practice</legend>
           <label for="first-name">First Name: <b>*</b></label><br>
@@ -118,6 +178,7 @@
           <input id="birth-date" aria-labelledby="basic-info" aria-required="true" type="date">
         </fieldset>
 
+        <!-- Radio Input Practice/Implementation -->
         <fieldset id="pizza-toppings">
           <legend>Radio Input Practice [Pizza Toppings]</legend>
           <form>
@@ -134,6 +195,7 @@
           </form>
         </fieldset>
 
+        <!-- Select Dropdown Practice/Implementation -->
         <fieldset id="city-travel">
           <legend>Select Input Practice [Cities]</legend>
           <label for="citieh scope="row" tabindex="0"s">Which city would you travel to?</label>
@@ -146,6 +208,7 @@
           </select>
         </fieldset>
 
+        <!-- Checkbox Input Practice/Implementation: Use space key to toggle checkboxes -->
         <fieldset id="birds">
             <legend>Checklist Input Practice [Birds]</legend>
             <input id="sparrow" type="checkbox" aria-labelledby="birds" role="checkbox" value="sparrow">
