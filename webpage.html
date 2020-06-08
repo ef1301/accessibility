@@ -1,180 +1,180 @@
 <!doctype HTML>
 <html lang="en">
 
-<head>
+  <head>
     <title>Accessibility</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" type="text/css" href="inert.css" id="inert-style" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Accessibility</h1>
-        <nav>
+      <h1>Accessibility</h1>
+      <nav>
         <ul>
-            <li><a role="navigation" href="">Home</a></li>
-            <li><a role="navigation" href="">About</a></li>
-            <li><a role="navigation" href="">Blog</a></li>
-            <li><a role="navigation" href="">Services</a></li>
+          <li><a role="navigation" href="">Home</a></li>
+          <li><a role="navigation" href="">About</a></li>
+          <li><a role="navigation" href="">Blog</a></li>
+          <li><a role="navigation" href="">Services</a></li>
         </ul>
-    </nav>
+      </nav>
     </header>
 
     <main>
-        <button id="alert-btn">Show Alert</button>
-        <template id="notification-tmpl">
-            <div class="notification">You have been alerted!</div>
-        </template>
-        <button id="dialog-btn" onclick="openDialogue()">Show Dialog</button>
-        <section id="alert"></section>
+      <button id="alert-btn">Show Alert</button>
+      <template id="notification-tmpl">
+        <div class="notification">You have been alerted!</div>
+      </template>
+      <button id="dialog-btn" onclick="openDialogue()">Show Dialog</button>
+      <section id="alert"></section>
 
-        <section id="media">
-            <h2 for="media">Media</h2>
-            <video width="320" height="240" controls>
-                <source src="movie.mp4" type="video/mp4">
-                <source src="movie.ogg" type="video/ogg">
-                Your browser does not support the video tag.
-            </video><br>
+      <section id="media">
+        <h2 for="media">Media</h2>
+        <video width="320" height="240" controls>
+          <source src="movie.mp4" type="video/mp4">
+          <source src="movie.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+        </video><br>
 
-            <section id="music">
-                <h3><label for="#music">Best Friend by Rex Orange County</label></h3>
-                <audio title="[Song] Best Friend by Rex Orange County" controls>
-                    <source src="best_friend.ogg" type="audio/ogg">
-                    <source src="best_friend.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                </audio>
-            </section>
-            <button class="toggle">Display Podcast Transcript</button>
-            <div class="toggle-content">
-                <iframe title="Best Friend by Rex Orange County Lyrics" src="best_friend_lyrics.txt" frameborder="0" height="auto" width="85%"></iframe>
-            </div>
+        <section id="music">
+          <h3><label for="#music">Best Friend by Rex Orange County</label></h3>
+          <audio title="[Song] Best Friend by Rex Orange County" controls>
+            <source src="best_friend.ogg" type="audio/ogg">
+            <source src="best_friend.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
         </section>
+        <button class="toggle">Display Podcast Transcript</button>
+        <div class="toggle-content">
+          <iframe title="Best Friend by Rex Orange County Lyrics" src="best_friend_lyrics.txt" frameborder="0" height="auto" width="85%"></iframe>
+        </div>
+      </section>
 
-        <section id="students-table">
-            <h2 for="students-table">2019-2020 Student Report</h2>
-            <table id="student-report">
-                <caption class=.>Report of 6th Grader Averages in 2019-2020</caption>
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Test Grade</th>
-                    <th scope="col">Teacher</th>
-                </tr>
-                <tr>
-                    <td>Julie</td>
-                    <td>95%</td>
-                    <td>Robert Pratt</td>
-                </tr>
-                <tr>
-                    <td>Benjamin</td>
-                    <td>100%</td>
-                    <td>Robert Pratt</td>
-                </tr>
-                <tr>
-                    <td>Kerry</td>
-                    <td>90%</td>
-                    <td>Catherine Huang</td>
-                </tr>
-            </table>
+      <section id="students-table">
+        <h2 for="students-table">2019-2020 Student Report</h2>
+        <table id="student-report">
+          <caption class=.>Report of 6th Grader Averages in 2019-2020</caption>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Test Grade</th>
+            <th scope="col">Teacher</th>
+          </tr>
+          <tr>
+            <td>Julie</td>
+            <td>95%</td>
+            <td>Robert Pratt</td>
+          </tr>
+          <tr>
+            <td>Benjamin</td>
+            <td>100%</td>
+            <td>Robert Pratt</td>
+          </tr>
+          <tr>
+            <td>Kerry</td>
+            <td>90%</td>
+            <td>Catherine Huang</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="image-gallery">
+        <h2><label for="image-gallery">Gallery</label></h2>
+
+        <article>
+          <img src="favorite_fruit.png" aria-details="pie-chart-info" alt="Pie Chart: What is your favorite fruit? Data table follows.">
+          <dl class="visually-hidden" id="pie-chart-info">
+            <dt>Banana</dt>
+            <dd>30%</dd>
+            <dt>Grapes</dt>
+            <dd>27%</dd>
+            <dt>Pineapple</dt>
+            <dd>20%</dd>
+            <dt>Orange</dt>
+            <dd>13%</dd>
+            <dt>Peach</dt>
+            <dd>10%</dd>
+          </dl>
+        </art icle>
+
+        <article>
+          <img src="bar_graph.png" alt="">
+        </article>
+        <article>
+          <img src="line_graph.png" alt="">
+        </article>
+      </section>
+
+      <form id="user-form">
+        <section>
+          <fieldset id="basic-info-form">
+            <legend>Basic Text Form</legend>
+            <label for="first-name">First Name: <b>*</b></label><br>
+            <input id="first-name" aria-labelledby="basic-info-form" aria-required="true" type="text" placeholder="Enter Your First Name"><br>
+            <label for="last-name">Last Name: <b>*</b></label><br>
+            <input id="last-name" aria-labelledby="basic-info-form" aria-required="true" type="text" placeholder="Enter Your Last Name"><br>
+            <label for="birth-date">Date of Birth: <b>*</b></label><br>
+            <input id="birth-date" aria-labelledby="basic-info-form" aria-required="true" type="date">
+          </fieldset>
+
+          <fieldset>
+            <legend>Radio Input</legend>
+            <form>
+              <h4>Favorite Pizza Topping</h4>
+              <div role="radiogroup">
+                <input type="radio" id="pineapple" name="topping">
+                <label for="pineapple">Pineapple</label><br>
+                <input type="radio" id="ham" name="topping">
+                <label for="ham">Ham</label><br>
+                <input type="radio" id="olive" name="topping">
+                <label for="olive">Olive</label><br>
+                <input type="radio" id="none" name="topping">
+                <label for="none">None</label><br>
+              </div>
+            </form>
+          </fieldset>
+
+          <fieldset>
+            <legend>Select Input</legend>
+            <label for="cities">Which city would you travel to?</label>
+            <select id="cities">
+              <option>New York</option>
+              <option>Seoul</option>
+              <option>Moscow</option>
+              <option>Buenos Aires</option>
+              <option>Tokyo</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Checklist Input</legend>
+            <input id="sparrow" type="checkbox" name="birds" value="sparrow">
+            <label for="sparrow">Sparrow</label> <br>
+            <input id="chicken" type="checkbox" name="birds" value="chicken">
+            <label for="chicken">Chicken</label> <br>
+            <input id="pigeon" type="checkbox" name="birds" value="pigeon">
+            <label for="pigeon">Pigeon</label> <br>
+            <input id="cotinga" type="checkbox" name="birds" value="cotinga">
+            <label for="cotinga">Cotinga</label> <br>
+          </fieldset>
+          <button type="submit" form="user-form" value="user-form-submission">Submit</button>
         </section>
-
-        <section id="image-gallery">
-            <h2><label for="image-gallery">Gallery</label></h2>
-
-            <article>
-                <img src="favorite_fruit.png" aria-details="pie-chart-info" alt="Pie Chart: What is your favorite fruit? Data table follows.">
-                <dl class="visually-hidden" id="pie-chart-info">
-                    <dt>Banana</dt>
-                    <dd>30%</dd>
-                    <dt>Grapes</dt>
-                    <dd>27%</dd>
-                    <dt>Pineapple</dt>
-                    <dd>20%</dd>
-                    <dt>Orange</dt>
-                    <dd>13%</dd>
-                    <dt>Peach</dt>
-                    <dd>10%</dd>
-                </dl>
-            </article>
-
-            <article>
-                <img src="bar_graph.png" alt="">
-            </article>
-            <article>
-                <img src="line_graph.png" alt="">
-            </article>
-        </section>
-
-        <form id="user-form">
-            <section>
-                <fieldset>
-                    <legend>Basic Text Form</legend>
-                    <label for="first-name">First Name: <b>*</b></label><br>
-                    <input id="first-name" aria-required="true" type="text" placeholder="Enter Your First Name"><br>
-                    <label for="last-name">Last Name: <b>*</b></label><br>
-                    <input id="last-name" aria-required="true" type="text" placeholder="Enter Your Last Name"><br>
-                    <label for="birth-date">Date of Birth: <b>*</b></label><br>
-                    <input id="birth-date" aria-required="true" type="date">
-                </fieldset>
-
-                <fieldset>
-                    <legend>Radio Input</legend>
-                    <form>
-                        <h4>Favorite Pizza Topping</h4>
-                        <div role="radiogroup">
-                            <input type="radio" id="pineapple" name="topping">
-                            <label for="pineapple">Pineapple</label><br>
-                            <input type="radio" id="ham" name="topping">
-                            <label for="ham">Ham</label><br>
-                            <input type="radio" id="olive" name="topping">
-                            <label for="olive">Olive</label><br>
-                            <input type="radio" id="none" name="topping">
-                            <label for="none">None</label><br>
-                        </div>
-                    </form>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Select Input</legend>
-                    <label for="cities">Which city would you travel to?</label>
-                    <select id="cities">
-                        <option>New York</option>
-                        <option>Seoul</option>
-                        <option>Moscow</option>
-                        <option>Buenos Aires</option>
-                        <option>Tokyo</option>
-                    </select>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Checklist Input</legend>
-                    <input id="sparrow" type="checkbox" name="birds" value="sparrow">
-                    <label for="sparrow">Sparrow</label> <br>
-                    <input id="chicken" type="checkbox" name="birds" value="chicken">
-                    <label for="chicken">Chicken</label> <br>
-                    <input id="pigeon" type="checkbox" name="birds" value="pigeon">
-                    <label for="pigeon">Pigeon</label> <br>
-                    <input id="cotinga" type="checkbox" name="birds" value="cotinga">
-                    <label for="cotinga">Cotinga</label> <br>
-                </fieldset>
-                <button type="submit" form="user-form" value="user-form-submission">Submit</button>                
-            </section>
-        </form>
+      </form>
     </main>
 
     <div class="dialog" role="dialog" aria-labelledby="dialog-title">
-        <div class="dialog-window">
-            <h2 id="dialog-title">Dialog Example</h2>
-            Cool Stuff bro!
-            <button id='closeDialog-btn' onclick="closeDialog()">Ok</button>
-        </div>
-        <div class="dialog-mask"></div>
+      <div class="dialog-window">
+        <h2 id="dialog-title">Dialog Example</h2>
+        Cool Stuff bro!
+        <button id='closeDialog-btn' onclick="closeDialog()">Ok</button>
+      </div>
+      <div class="dialog-mask"></div>
     </div>
     <aside></aside>
 
     <footer></footer>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Map,Set,Element.prototype.matches,Node.prototype.contains"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
