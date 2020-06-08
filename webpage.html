@@ -107,14 +107,14 @@
       </section>
 
       <form id="user-form">
-        <fieldset id="basic-info-form">
+        <fieldset>
           <legend>Basic Text Form Practice</legend>
           <label for="first-name">First Name: <b>*</b></label><br>
-          <input id="first-name" aria-labelledby="basic-info-form" aria-required="true" type="text" placeholder="Enter Your First Name"><br>
+          <input id="first-name" aria-required="true" type="text" placeholder="Enter Your First Name"><br>
           <label for="last-name">Last Name: <b>*</b></label><br>
-          <input id="last-name" aria-labelledby="basic-info-form" aria-required="true" type="text" placeholder="Enter Your Last Name"><br>
+          <input id="last-name" aria-required="true" type="text" placeholder="Enter Your Last Name"><br>
           <label for="birth-date">Date of Birth: <b>*</b></label><br>
-          <input id="birth-date" aria-labelledby="basic-info-form" aria-required="true" type="date">
+          <input id="birth-date" aria-required="true" type="date">
         </fieldset>
 
           <fieldset id="pizza-toppings">
@@ -122,13 +122,13 @@
             <form>
               <h4>Favorite Pizza Topping</h4>
               <div role="radiogroup">
-                <input aria-labelledby="pizza-toppings" type="radio" id="pineapple" name="topping">
+                <input type="radio" id="pineapple" name="topping">
                 <label for="pineapple">Pineapple</label><br>
-                <input aria-labelledby="pizza-toppings" type="radio" id="ham" name="topping">
+                <input type="radio" id="ham" name="topping">
                 <label for="ham">Ham</label><br>
-                <input aria-labelledby="pizza-toppings" type="radio" id="olive" name="topping">
+                <input type="radio" id="olive" name="topping">
                 <label for="olive">Olive</label><br>
-                <input aria-labelledby="pizza-toppings" type="radio" id="none" name="topping">
+                <input type="radio" id="none" name="topping">
                 <label for="none">None</label><br>
               </div>
             </form>
@@ -148,20 +148,20 @@
 
           <fieldset id="birds">
             <legend>Checklist Input Practice [Birds]</legend>
-            <input id="sparrow" type="checkbox" aria-labelledby="birds" value="sparrow">
+            <input id="sparrow" type="checkbox" value="sparrow">
             <label for="sparrow">Sparrow</label> <br>
-            <input id="chicken" type="checkbox" aria-labelledby="birds" value="chicken">
+            <input id="chicken" type="checkbox" value="chicken">
             <label for="chicken">Chicken</label> <br>
-            <input id="pigeon" type="checkbox" aria-labelledby="birds" value="pigeon">
+            <input id="pigeon" type="checkbox" value="pigeon">
             <label for="pigeon">Pigeon</label> <br>
-            <input id="cotinga" type="checkbox" aria-labelledby="birds" value="cotinga">
+            <input id="cotinga" type="checkbox" value="cotinga">
             <label for="cotinga">Cotinga</label> <br>
           </fieldset>
           <button type="submit" form="user-form" value="user-form-submission">Submit</button>
       </form>
     </main>
     
-    <div class="dialog" role="dialog" aria-labelledby="dialog-title">
+    <div class="dialog" role="dialog">
       <div class="dialog-window">
         <h2 id="dialog-title">Dialog Example</h2>
         Cool Stuff bro!
