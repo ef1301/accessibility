@@ -107,59 +107,57 @@
       </section>
 
       <form id="user-form">
-        <section>
-          <fieldset id="basic-info-form">
-            <legend>Basic Text Form</legend>
-            <label for="first-name">First Name: <b>*</b></label><br>
-            <input id="first-name" aria-labelledby="basic-info-form" aria-required="true" type="text" placeholder="Enter Your First Name"><br>
-            <label for="last-name">Last Name: <b>*</b></label><br>
-            <input id="last-name" aria-labelledby="basic-info-form" aria-required="true" type="text" placeholder="Enter Your Last Name"><br>
-            <label for="birth-date">Date of Birth: <b>*</b></label><br>
-            <input id="birth-date" aria-labelledby="basic-info-form" aria-required="true" type="date">
-          </fieldset>
+        <fieldset id="basic-info-form">
+          <legend>Basic Text Form</legend>
+          <label for="first-name">First Name: <b>*</b></label><br>
+          <input id="first-name" aria-labelledby="basic-info-form" aria-required="true" type="text" placeholder="Enter Your First Name"><br>
+          <label for="last-name">Last Name: <b>*</b></label><br>
+          <input id="last-name" aria-labelledby="basic-info-form" aria-required="true" type="text" placeholder="Enter Your Last Name"><br>
+          <label for="birth-date">Date of Birth: <b>*</b></label><br>
+          <input id="birth-date" aria-labelledby="basic-info-form" aria-required="true" type="date">
+        </fieldset>
 
-          <fieldset>
-            <legend>Radio Input</legend>
-            <form>
-              <h4>Favorite Pizza Topping</h4>
-              <div role="radiogroup">
-                <input type="radio" id="pineapple" name="topping">
-                <label for="pineapple">Pineapple</label><br>
-                <input type="radio" id="ham" name="topping">
-                <label for="ham">Ham</label><br>
-                <input type="radio" id="olive" name="topping">
-                <label for="olive">Olive</label><br>
-                <input type="radio" id="none" name="topping">
-                <label for="none">None</label><br>
-              </div>
-            </form>
-          </fieldset>
+        <fieldset id="pizza-toppings">
+          <legend>Radio Input</legend>
+          <form>
+            <h4>Favorite Pizza Topping</h4>
+            <div role="radiogroup">
+              <input aria-labelledby="pizza-toppings" type="radio" id="pineapple" name="topping">
+              <label for="pineapple">Pineapple</label><br>
+              <input aria-labelledby="pizza-toppings" type="radio" id="ham" name="topping">
+              <label for="ham">Ham</label><br>
+              <input aria-labelledby="pizza-toppings" type="radio" id="olive" name="topping">
+              <label for="olive">Olive</label><br>
+              <input aria-labelledby="pizza-toppings" type="radio" id="none" name="topping">
+              <label for="none">None</label><br>
+            </div>
+          </form>
+        </fieldset>
 
-          <fieldset>
-            <legend>Select Input</legend>
-            <label for="cities">Which city would you travel to?</label>
-            <select id="cities">
-              <option>New York</option>
-              <option>Seoul</option>
-              <option>Moscow</option>
-              <option>Buenos Aires</option>
-              <option>Tokyo</option>
-            </select>
-          </fieldset>
+        <fieldset id="city-travel">
+          <legend>Select Input</legend>
+          <label for="cities">Which city would you travel to?</label>
+          <select id="cities" aria-labelledby=""city-travel>
+            <option>New York</option>
+            <option>Seoul</option>
+            <option>Moscow</option>
+            <option>Buenos Aires</option>
+            <option>Tokyo</option>
+          </select>
+        </fieldset>
 
-          <fieldset>
-            <legend>Checklist Input</legend>
-            <input id="sparrow" type="checkbox" name="birds" value="sparrow">
-            <label for="sparrow">Sparrow</label> <br>
-            <input id="chicken" type="checkbox" name="birds" value="chicken">
-            <label for="chicken">Chicken</label> <br>
-            <input id="pigeon" type="checkbox" name="birds" value="pigeon">
-            <label for="pigeon">Pigeon</label> <br>
-            <input id="cotinga" type="checkbox" name="birds" value="cotinga">
-            <label for="cotinga">Cotinga</label> <br>
-          </fieldset>
-          <button type="submit" form="user-form" value="user-form-submission">Submit</button>
-        </section>
+        <fieldset id="birds">
+          <legend>Checklist Input</legend>
+          <input id="sparrow" type="checkbox" aria-labelledby="birds" value="sparrow">
+          <label for="sparrow">Sparrow</label> <br>
+          <input id="chicken" type="checkbox" aria-labelledby="birds" value="chicken">
+          <label for="chicken">Chicken</label> <br>
+          <input id="pigeon" type="checkbox" aria-labelledby="birds" value="pigeon">
+          <label for="pigeon">Pigeon</label> <br>
+          <input id="cotinga" type="checkbox" aria-labelledby="birds" value="cotinga">
+          <label for="cotinga">Cotinga</label> <br>
+        </fieldset>
+        <button type="submit" form="user-form" value="user-form-submission">Submit</button>
       </form>
     </main>
 
