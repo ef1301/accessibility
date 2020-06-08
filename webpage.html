@@ -63,17 +63,17 @@
             <th scope="col" tabindex="0">Teacher</th>
           </tr>
           <tr>
-            <th scope="row" tabindex="0">Julie</th>
+            <td>Julie</td>
             <td>95%</td>
             <td>Robert Pratt</td>
           </tr>
           <tr>
-            <th scope="row" tabindex="0">Benjamin</th>
+            <td>Benjamin</td>
             <td>100%</td>
             <td>Robert Pratt</td>
           </tr>
           <tr>
-            <th scope="row" tabindex="0">Kerry</th>
+            <td>Kerry</td>
             <td>90%</td>
             <td>Catherine Huang</td>
           </tr>
@@ -85,7 +85,7 @@
 
         <article>
           <img src="favorite_fruit.png" aria-details="pie-chart-info" alt="Pie Chart: What is your favorite fruit? Data table follows." tabindex="0">
-          <dl class="visually-hidden" id="pie-chart-info">
+          <dl class="visually-hidden" id="pie-chart-info" tabindex="0">
             <dt>Banana</dt>
             <dd>30%</dd>
             <dt>Grapes</dt>
@@ -122,13 +122,13 @@
           <legend>Radio Input Practice [Pizza Toppings]</legend>
           <form>
             <div role="radiogroup">
-              <input aria-labelledby="pizza-toppings" type="radio" id="pineapple" name="topping">
+              <input aria-labelledby="pizza-toppings" type="radio" id="pineapple" name="pineapple">
               <label for="pineapple">Pineapple</label><br>
-              <input aria-labelledby="pizza-toppings" type="radio" id="ham" name="topping">
+              <input aria-labelledby="pizza-toppings" type="radio" id="ham" name="ham">
               <label for="ham">Ham</label><br>
-              <input aria-labelledby="pizza-toppings" type="radio" id="olive" name="topping">
+              <input aria-labelledby="pizza-toppings" type="radio" id="olive" name="olive">
               <label for="olive">Olive</label><br>
-              <input aria-labelledby="pizza-toppings" type="radio" id="none" name="topping">
+              <input aria-labelledby="pizza-toppings" type="radio" id="none" name="none">
               <label for="none">None</label><br>
             </div>
           </form>
@@ -136,7 +136,7 @@
 
         <fieldset id="city-travel">
           <legend>Select Input Practice [Cities]</legend>
-          <label for="cities">Which city would you travel to?</label>
+          <label for="citieh scope="row" tabindex="0"s">Which city would you travel to?</label>
           <select id="cities" aria-labelledby=""city-travel>
             <option>New York</option>
             <option>Seoul</option>
@@ -146,7 +146,7 @@
           </select>
         </fieldset>
 
-        <fieldset id="birds" tabindex="0">
+        <fieldset id="birds">
             <legend>Checklist Input Practice [Birds]</legend>
             <input id="sparrow" type="checkbox" aria-labelledby="birds" role="checkbox" value="sparrow">
             <label for="sparrow">Sparrow</label> <br>
