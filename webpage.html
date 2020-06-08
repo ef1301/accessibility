@@ -55,7 +55,6 @@
       </section>
 
       <section id="students-table" tabindex="0">
-        <h2 for="students-table" tabindex="0">2019-2020 Student Report</h2>
         <table id="student-report" tabindex="0">
           <caption>Report of 6th Grader Averages in 2019-2020</caption>
           <tr>
@@ -108,21 +107,20 @@
         </article>
       </section>
 
-      <form id="user-form" tabindex="0">
-        <fieldset tabindex="0">
+      <form id="user-form">
+        <fieldset id="basic-info">
           <legend>Basic Text Form Practice</legend>
           <label for="first-name">First Name: <b>*</b></label><br>
-          <input id="first-name" aria-required="true" type="text" placeholder="Enter Your First Name"><br>
+          <input id="first-name" aria-labelledby="basic-info" aria-required="true" type="text" placeholder="Enter Your First Name"><br>
           <label for="last-name">Last Name: <b>*</b></label><br>
-          <input id="last-name" aria-required="true" type="text" placeholder="Enter Your Last Name"><br>
+          <input id="last-name" aria-labelledby="basic-info" aria-required="true" type="text" placeholder="Enter Your Last Name"><br>
           <label for="birth-date">Date of Birth: <b>*</b></label><br>
-          <input id="birth-date" aria-required="true" type="date">
+          <input id="birth-date" aria-labelledby="basic-info" aria-required="true" type="date">
         </fieldset>
 
-        <fieldset id="pizza-toppings" tabindex="0">
+        <fieldset id="pizza-toppings">
           <legend>Radio Input Practice [Pizza Toppings]</legend>
           <form>
-            <h4>Favorite Pizza Topping</h4>
             <div role="radiogroup">
               <input aria-labelledby="pizza-toppings" type="radio" id="pineapple" name="topping">
               <label for="pineapple">Pineapple</label><br>
@@ -136,7 +134,7 @@
           </form>
         </fieldset>
 
-        <fieldset id="city-travel" tabindex="0">
+        <fieldset id="city-travel">
           <legend>Select Input Practice [Cities]</legend>
           <label for="cities">Which city would you travel to?</label>
           <select id="cities" aria-labelledby=""city-travel>
