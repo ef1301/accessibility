@@ -1,0 +1,163 @@
+html, body {
+    height: 100%;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    height: 15%;
+    background-color: white;
+    border-bottom:solid 5px gray;
+}
+
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    background-color:white;
+    padding: .5em;
+    color: black;
+    border: solid 1px black;
+}
+
+nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+.visually-hidden { 
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
+
+main {
+    margin: 20vh 5vw;
+}
+
+main section {
+    margin: 10vh auto;
+}
+
+#alert {
+    margin: auto;
+}
+
+#media {
+    text-align: center;
+}
+
+#image-gallery {
+    padding: 1vh 1vw;
+    border: solid 1px black;
+}
+
+#image-gallery article {
+    margin: 2vh auto;
+}
+
+#image-gallery article img {
+    width: 40vw;
+    object-fit: cover;
+}
+
+table td, th {
+    border: solid 1px black;
+    text-align: center;
+}
+
+#student-report {
+    border-collapse: collapse;
+    padding: 1vh 1vw;   
+}
+
+label b {
+    color: red;
+}
+
+section button[type=submit], button {
+    background-color: white;
+    padding: 1vh 1vw;
+}
+
+section button[type=submit] {
+    float: right;
+    margin: 5vh auto;
+}
+
+section button[type=submit]:hover, button:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.toggle-content {
+    display: none;
+}
+
+#music {
+
+}
+
+.toggle {
+    display: block;
+    margin: auto;
+}
+
+#music audio {
+    width: 50%;
+}
+
+.dialog {
+    display: none;
+}
+
+.dialog.opened {
+    display: block;
+}
+
+.dialog-window {
+    display: inline-block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    z-index: 101;
+    padding: 3vh 3vw;
+    border: solid 5px white;
+}
+
+.dialog-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000000;
+    opacity: 0.6;
+    overflow: hidden;
+    z-index: 100;
+
+}
+
+.hidden {
+    position: absolute;
+    clip: 1px 1px 1px 1px;
+    clip: 1px 1px 1px 1px;
+    z-index: -1;
+}
