@@ -122,13 +122,13 @@
             <form>
               <h4>Favorite Pizza Topping</h4>
               <div role="radiogroup">
-                <input type="radio" id="pineapple" name="topping">
+                <input aria-labelledby="pizza-toppings" type="radio" id="pineapple" name="topping">
                 <label for="pineapple">Pineapple</label><br>
-                <input type="radio" id="ham" name="topping">
+                <input aria-labelledby="pizza-toppings" type="radio" id="ham" name="topping">
                 <label for="ham">Ham</label><br>
-                <input type="radio" id="olive" name="topping">
+                <input aria-labelledby="pizza-toppings" type="radio" id="olive" name="topping">
                 <label for="olive">Olive</label><br>
-                <input type="radio" id="none" name="topping">
+                <input aria-labelledby="pizza-toppings" type="radio" id="none" name="topping">
                 <label for="none">None</label><br>
               </div>
             </form>
@@ -148,20 +148,20 @@
 
           <fieldset id="birds">
             <legend>Checklist Input Practice [Birds]</legend>
-            <input id="sparrow" type="checkbox" value="sparrow">
+            <input id="sparrow" type="checkbox" aria-labelledby="birds" value="sparrow">
             <label for="sparrow">Sparrow</label> <br>
-            <input id="chicken" type="checkbox" value="chicken">
+            <input id="chicken" type="checkbox" aria-labelledby="birds" value="chicken">
             <label for="chicken">Chicken</label> <br>
-            <input id="pigeon" type="checkbox" value="pigeon">
+            <input id="pigeon" type="checkbox" aria-labelledby="birds" value="pigeon">
             <label for="pigeon">Pigeon</label> <br>
-            <input id="cotinga" type="checkbox" value="cotinga">
+            <input id="cotinga" type="checkbox" aria-labelledby="birds" value="cotinga">
             <label for="cotinga">Cotinga</label> <br>
           </fieldset>
           <button type="submit" form="user-form" value="user-form-submission">Submit</button>
       </form>
     </main>
     
-    <div class="dialog" role="dialog">
+    <div class="dialog" role="dialog" aria-labelledby="dialog-title">
       <div class="dialog-window">
         <h2 id="dialog-title">Dialog Example</h2>
         Cool Stuff bro!
