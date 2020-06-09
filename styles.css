@@ -49,7 +49,7 @@ main {
 }
 
 main section {
-    margin: 10vh auto;
+    margin: 5vh auto;
 }
 
 #alert {
@@ -57,7 +57,11 @@ main section {
 }
 
 #media {
-    text-align: center;
+    text-align: left;
+}
+
+#media audio, video {
+    margin: auto;
 }
 
 #image-gallery {
@@ -113,8 +117,7 @@ section button[type=submit]:hover, button:hover {
 }
 
 .toggle {
-    display: block;
-    margin: auto;
+    margin: auto 2vh;
 }
 
 #music audio {

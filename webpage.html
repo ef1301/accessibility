@@ -25,20 +25,80 @@
 
     <!-- Main Page Elements -->
     <main>
+      <section>
+        <h2>WCAG Accessibility</h2>
+        <p><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> is divided into 4 categories with a total of 12 practices: <br>
+          <h3>Perceivable</h3>
+          <ul>
+            <li>1.1 Provide text alternatives</li>
+            <li>1.2 Provide alternative methods</li>
+            <li>1.3 Provide the ability to present content in different ways, allowing for customization</li>
+            <li>1.4 Make it easier to see and hear content</li>
+          </ul>
+          <h3>Operable</h3>
+          <ul>
+            <li>2.1 Make functionality available via the keyboard</li>
+            <li>2.2 Provide enough time to interact</li>
+            <li>2.3 Avoid designing/developing content that causes seizures</li>
+            <li>2.4 Help navigate, find content, and determine where they are focused</li>
+          </ul>
+          <h3>Understandable</h3>
+          <ul>
+            <li>3.1 Text content should be understandable</li>
+            <li>3.2 Interface should be consistent and predictable</li>
+            <li>3.3 Help users fix mistakes</li>
+          </ul>
+          <h3>Robust</h3>
+          <ul>
+            <li>4.1 Maximize compatibility of user agents and assistive technologies</li>
+          </ul>
+        </p>
+      </section>
+      
       <!-- Alert and Dialogue Practice/Implementation -->
-      <button id="alert-btn">Show Alert</button>
-      <template id="notification-tmpl">
-        <div class="notification">You have been alerted!</div>
-      </template>
-      <!-- The HTML for the dialogue window are located at the very bottom of the document -->
-      <button id="dialog-btn" onclick="openDialogue()">Show Dialog</button>
-      <section id="alert"></section>
-
+      <section>
+        <button id="alert-btn">Show Alert</button>
+        <template id="notification-tmpl">
+          <div class="notification">You have been alerted!</div>
+        </template>
+        <!-- The HTML for the dialogue window are located at the very bottom of the document -->
+        <button id="dialog-btn" onclick="openDialogue()">Show Dialog</button>
+        <div id="alert"></div>
+      </section>
+      
       <!-- Media Practice/Implementation -->
       <section id="media">
         <h2 for="media">Media</h2>
+        <p>Media accessibilty can be achieved using captions and transcripts for the visually or hearing disabilities.</p>
+        <p>Nowadays, web designers may decide to utilize autoplay, but this doesn't comply with WCAG 1.4.2.
+          <ul>
+            <li>Audio must not automatically play for more than 3 seconds.</li>
+            <li>Must be able to pause or stop it.</li>
+            <li>Must be able to reduce the volume independently of system audio.</li>
+          </ul>
+          Some solutions to autoplaying audio are:
+          <ul>
+            <li>Make the audio shorter than 3 seconds.</li>
+            <li>Add a link at the top of the page or sticky positioned stop/pause or control volume.</li>
+            <li>Allow the user to initiate audio or video themselves.</li>
+          </ul>
+        </p>
         <!-- Video -->
         <section id="video">
+          <h3>Video</h3>
+          <p>For videos, captions are used to describe anything audible for the hard of hearing. This can be done with a caption track by using a track tag.
+            
+            <aside>
+              <pre>
+                <code>
+                &lt video controls src='video.mp4' &gt
+                  &lt track kind='captions' src='captions.vtt' &gt
+                &lt / video &gt
+                </code>
+              </pre>
+            </aside>
+            To add caption tracks, WebVTT formatted transcripts are used. In addition to captions, transcripts are also additions necessary for media accessibility.
+          </p>
           <video width="320" height="240" controls>
             <source src="movie.mp4" type="video/mp4">
             <source src="movie.ogg" type="video/ogg">
@@ -48,18 +108,20 @@
 
         <!-- Audio/Music -->
         <section id="music">
+          <h3>Audio</h3>
+          <p></p>
           <label for="#music"><h3>Best Friend by Rex Orange County</h3>
             <h4>Written by Rex Orange County & Two Inch Punch <br> Released January 25,2017</h4>
           </label>
-          <audio title="[Song] Best Friend by Rex Orange County" controls>
+          <audio title="[Song] Best Friend by Rex Orange County" controls aria-describedby="lyrics" aria-label="Music: Best Friend by Rex Orange County">
             <source src="best_friend.ogg" type="audio/ogg">
             <source src="best_friend.mp3" type="audio/mpeg">
             Your browser does not support the audio tag.
           </audio>
           <!-- Implemenation fo the Music Toggle for the Transcript/Lyrics -->
-          <button class="toggle">Display Podcast Transcript</button>
+          <br><button class="toggle">Display Podcast Transcript</button>
           <div class="toggle-content">
-            <iframe title="Best Friend by Rex Orange County Lyrics" src="best_friend_lyrics.txt" frameborder="0" height="auto" width="85%"></iframe>
+            <iframe id="lyrics" title="Best Friend by Rex Orange County Lyrics" src="best_friend_lyrics.txt" frameborder="0" height="auto" width="85%"></iframe>
           </div>
         </section>
       </section>
@@ -99,7 +161,7 @@
         <p>One of the basics to making images,especially complex images accessible, is to utilize the alt atribute for images, but in the event that your image is too complex and descriptions may become too long for alt text, what do you do?</p>
         <article>
           <h4>Pie Charts</h4>
-          <img src="favorite_fruit.png" aria-details="pie-chart-info" alt="Pie Chart: What is your favorite fruit? Data table follows." tabindex="0">
+          <img src="favorite_fruit.png" aria-details="pie-chart-info" alt="Pie Chart: What is your favorite fruit? Description follows." tabindex="0">
           <dl class="visually-hidden" id="pie-chart-info" tabindex="0">
             <dt>Banana</dt>
             <dd>30%</dd>
@@ -132,7 +194,7 @@
         <br>
         <article>
           <h4>Bar Graphs</h4>
-          <img src="bar_graph.png" aria-details="bar-graph-info" alt="" tabindex="0">
+          <img src="bar_graph.png" aria-details="bar-graph-info" alt="Bar Graph: Communication and Presentation Skills. Description follows." tabindex="0">
           <dl class="visually-hidden" tabindex="0">
             <dt>Present their ideas clearly and effectively</dt>
             <dd>45% Agree. 55% Disagree.</dd>
@@ -147,6 +209,7 @@
             <dt>Communicate with their colleagues and clients in a multicultural environment.</dt>
             <dd>35% Agree. 65% Disagree.</dd>
           </dl>
+          <p>As for bar graphs, descriptions and tables can be used in a similar manner to pie charts.</p>
         </article>
         <br>
         <article>
@@ -166,18 +229,13 @@
 
       <!-- Form Practice/Implementation -->
       <form id="user-form">
+        <label for="first-name">First Name: <b>*</b></label><br>
+        <input id="first-name" aria-labelledby="basic-info" aria-required="true" type="text" placeholder="Enter Your First Name"><br>
+        <label for="last-name">Last Name: <b>*</b></label><br>
+        <input id="last-name" aria-labelledby="basic-info" aria-required="true" type="text" placeholder="Enter Your Last Name"><br>
+        <label for="birth-date">Date of Birth: <b>*</b></label><br>
+        <input id="birth-date" aria-labelledby="basic-info" aria-required="true" type="date">
         
-        <!-- Text/Date Input Practice/Implementation -->
-        <fieldset id="basic-info">
-          <legend>Basic Text Form Practice</legend>
-          <label for="first-name">First Name: <b>*</b></label><br>
-          <input id="first-name" aria-labelledby="basic-info" aria-required="true" type="text" placeholder="Enter Your First Name"><br>
-          <label for="last-name">Last Name: <b>*</b></label><br>
-          <input id="last-name" aria-labelledby="basic-info" aria-required="true" type="text" placeholder="Enter Your Last Name"><br>
-          <label for="birth-date">Date of Birth: <b>*</b></label><br>
-          <input id="birth-date" aria-labelledby="basic-info" aria-required="true" type="date">
-        </fieldset>
-
         <!-- Radio Input Practice/Implementation -->
         <fieldset id="pizza-toppings">
           <legend>Radio Input Practice [Pizza Toppings]</legend>
